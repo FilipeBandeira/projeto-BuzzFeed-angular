@@ -25,7 +25,7 @@ export class QuizzComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if(quizz_questions){
+    if(quizz_questions){ //Pegando informações do json, como ponteiros
       this.finished = false
       this.title = quizz_questions.title
 
@@ -41,13 +41,13 @@ export class QuizzComponent implements OnInit {
 
   }
 
-  playerChoose(value:string){
+  playerChoose(value:string){ //Método do evento clique das respostas
     this.answers.push(value)
     this.nextStep()
 
   }
 
-  async nextStep(){
+  async nextStep(){ // Próxima questão
     this.questionIndex+=1
 
     if(this.questionMaxIndex > this.questionIndex){
@@ -59,7 +59,7 @@ export class QuizzComponent implements OnInit {
     }
   }
 
-  async checkResult(anwsers:string[]){
+  async checkResult(anwsers:string[]){ //Checar quais respostas apareceram com mais frequência
 
     const result = anwsers.reduce((previous, current, i, arr)=>{
         if(
