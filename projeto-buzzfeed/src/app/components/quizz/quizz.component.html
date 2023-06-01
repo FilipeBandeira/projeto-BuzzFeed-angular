@@ -1,3 +1,5 @@
+<!--Cada div, ou container pode ser um component diferente, para ser montado no componente intermediário-->
+
 <div class="quizz__container">
 
     <div class="quizz_logo">
@@ -6,7 +8,7 @@
     </div>
   
     <div *ngIf=!finished class="quizz_questions">
-        <h3>{{questionSelected.question}}</h3>
+        <h3>{{questionSelected.question}}</h3> <!--Anexando o ts com o arquivo json-->
     </div>
   
     <div *ngIf=!finished class="quizz_options">

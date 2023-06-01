@@ -1,5 +1,5 @@
 .quizz__container{
-    width: 80%;
+    width: 80%; /*Interessante colocar um border pra visualizar a montagem*/
     margin: auto;
     margin-top: 20px;
   }
@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     margin-bottom: 10px;
   }
   
@@ -20,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     border:1px solid #4224d9;
     border-radius: 8px;
     background-color: #644ED2;
@@ -34,6 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     margin: auto;
     margin-bottom: 20px;
   }
@@ -53,11 +56,11 @@
     text-shadow: 0px 1px 0px #2f6627;
   }
   
-  .btn-option:hover{
+  .btn-option:hover{ /*Efeito no botão*/
     background-color: #5cbf2a;
   }
   
-  .btn-option:active{
+  .btn-option:active{ /*Efeito no botão*/
     position: relative;
     top:1px;
   }
@@ -68,6 +71,7 @@
     background-color: #1F0539;
     border-radius: 10px;
     padding: 30px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

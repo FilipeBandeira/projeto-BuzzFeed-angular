@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import quizz_questions from "../../../assets/data/quizz_questions.json"
+import quizz_questions from "../../../assets/data/quizz_questions.json" // Import do arquivo anexado, arquivo json na pasta assets
 
 @Component({
   selector: 'app-quizz',
@@ -11,11 +11,11 @@ export class QuizzComponent implements OnInit {
 
   title:string = ""
 
-  questions:any
+  questions:any // Melhor tipar do que o uso do any
   questionSelected:any
 
-  answers:string[] = []
-  answerSelected:string =""
+  answers:string[] = [] //Vetor para as respostas selecionadas
+  answerSelected:string ="" // Seleção atual
 
   questionIndex:number =0
   questionMaxIndex:number=0
@@ -47,7 +47,7 @@ export class QuizzComponent implements OnInit {
 
   }
 
-  async nextStep(){ // Próxima questão
+  async nextStep(){ // Próxima questão, usando ponteiro
     this.questionIndex+=1
 
     if(this.questionMaxIndex > this.questionIndex){
